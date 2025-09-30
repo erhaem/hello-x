@@ -6,6 +6,9 @@ import (
 	"time"
 )
 
+// Handler will handle the http request, receives name
+// and then returns a json saying "hello, {name}" 
+// and timestamp in unix format
 func handler(w http.ResponseWriter, r *http.Request) {
 	now := time.Now().Unix()
 	name := r.URL.Query().Get("name")
